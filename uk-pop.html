@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>영국 팝 소개 | Blue Glass Edition</title>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { sky: "#4cc9f0", cobalt: "#2563eb" } } } };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      background:
+        radial-gradient(circle at 20% 15%, rgba(37, 99, 235, 0.34), transparent 26%),
+        radial-gradient(circle at 80% 20%, rgba(34, 211, 238, 0.2), transparent 22%),
+        radial-gradient(circle at 60% 85%, rgba(59, 130, 246, 0.18), transparent 26%),
+        linear-gradient(160deg, #020816 0%, #05182c 45%, #03111f 100%);
+    }
+    .glass { background: linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.08)); backdrop-filter: blur(26px); -webkit-backdrop-filter: blur(26px); border: 1px solid rgba(255,255,255,.18); box-shadow: 0 30px 100px rgba(2,8,23,.55), inset 0 1px 0 rgba(255,255,255,.2); }
+    .fade-in { opacity: 0; transform: translateY(18px) scale(.985); animation: fadeUp 900ms cubic-bezier(.2,.85,.2,1) forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0) scale(1); } }
+    .shine { position: relative; overflow: hidden; }
+    .shine::after { content: ""; position: absolute; inset: -60% -40%; background: linear-gradient(120deg, transparent 35%, rgba(255,255,255,.18) 50%, transparent 65%); transform: translateX(-30%) rotate(12deg); animation: sweep 8s ease-in-out infinite; pointer-events: none; }
+    @keyframes sweep { 0%,55% { transform: translateX(-30%) rotate(12deg); opacity: 0; } 65% { opacity: 1; } 100% { transform: translateX(28%) rotate(12deg); opacity: 0; } }
+  </style>
+</head>
+<body class="min-h-screen text-slate-50 antialiased">
+  <header class="sticky top-3 z-50 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <nav class="glass flex flex-col gap-4 rounded-[1.75rem] px-4 py-4 sm:px-5 lg:flex-row lg:items-center lg:justify-between">
+      <a href="index.html" class="inline-flex items-center gap-3 self-start">
+        <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-300 via-sky-400 to-blue-600 text-lg font-black text-slate-950 shadow-lg shadow-cyan-500/25">P</span>
+        <div><p class="text-xs uppercase tracking-[0.28em] text-cyan-200/70">Pop Atlas</p><p class="text-sm font-semibold text-white">세계 팝 문화</p></div>
+      </a>
+      <div class="flex flex-wrap gap-2 sm:gap-3">
+        <a href="index.html" class="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:-translate-y-0.5 hover:bg-white/15">K-POP</a>
+        <a href="us-pop.html" class="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:-translate-y-0.5 hover:bg-white/15">미국 팝</a>
+        <a href="uk-pop.html" aria-current="page" class="rounded-full border border-cyan-300/35 bg-cyan-300/18 px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-cyan-300/24">영국 팝</a>
+        <a href="japan-pop.html" class="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:-translate-y-0.5 hover:bg-white/15">일본 팝</a>
+        <a href="latin-pop.html" class="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:-translate-y-0.5 hover:bg-white/15">라틴 팝</a>
+      </div>
+    </nav>
+  </header>
+  <main id="top" class="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-5 sm:px-6 lg:px-8 lg:py-8">
+    <section class="glass shine fade-in rounded-[2rem] p-6 sm:p-8 lg:p-10">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-slate-200 shadow-lg shadow-blue-950/20"><span class="h-2.5 w-2.5 rounded-full bg-cyan-300"></span>영국 팝 페이지</div>
+        <h1 class="mt-5 text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-7xl">영국 팝을<span class="block bg-gradient-to-r from-cyan-300 via-sky-400 to-blue-500 bg-clip-text text-transparent">같은 디자인으로 준비 중</span></h1>
+        <p class="mt-5 max-w-2xl text-base leading-8 text-slate-200/80 sm:text-lg">이 페이지는 아직 내용을 채우지 않은 상태예요. K-POP 페이지와 같은 블루 글래스 스타일을 유지하면서 영국 팝 소개를 위한 자리만 먼저 만들어 두었습니다.</p>
+      </div>
+    </section>
+    <section class="grid gap-6 lg:grid-cols-3">
+      <article class="glass fade-in rounded-[2rem] p-6 sm:p-8" style="animation-delay:120ms;"><p class="text-sm uppercase tracking-[0.24em] text-cyan-200/75">Overview</p><h2 class="mt-2 text-2xl font-extrabold tracking-tight text-white">개요</h2><div class="mt-5 space-y-4 text-sm leading-6 text-slate-200/75"><p>소개 문단을 넣을 예정인 자리예요.</p><p>대표 아티스트와 장르 특징을 나중에 추가하면 됩니다.</p><p>현재는 페이지 구조와 분위기만 맞춰 둔 상태예요.</p></div></article>
+      <article class="glass fade-in rounded-[2rem] p-6 sm:p-8" style="animation-delay:220ms;"><p class="text-sm uppercase tracking-[0.24em] text-sky-200/75">Features</p><h2 class="mt-2 text-2xl font-extrabold tracking-tight text-white">특징</h2><div class="mt-5 space-y-3"><div class="rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-slate-100/80">콘텐츠 추가 예정</div><div class="rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-slate-100/80">콘텐츠 추가 예정</div><div class="rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-slate-100/80">콘텐츠 추가 예정</div></div></article>
+      <article class="glass fade-in rounded-[2rem] p-6 sm:p-8" style="animation-delay:320ms;"><p class="text-sm uppercase tracking-[0.24em] text-blue-200/75">Note</p><h2 class="mt-2 text-2xl font-extrabold tracking-tight text-white">메모</h2><div class="mt-5 space-y-4 text-sm leading-6 text-slate-200/75"><p>이 페이지는 K-POP 페이지와 동일한 톤으로 시작합니다.</p><p>다음 작업에서 실제 영국 팝 내용을 채워 넣을 수 있어요.</p><p>네비게이션은 다른 나라 페이지와 서로 연결되어 있습니다.</p></div></article>
+    </section>
+  </main>
+</body>
+</html>
